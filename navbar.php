@@ -19,5 +19,8 @@
                 </ul>
             </div>
         </div>
+        <form action="includes/logout.inc.php" method="post">
+            <button type="submit" name="logout">Kijelentkezés</button>
+        </form>
     </nav>
 </body>
