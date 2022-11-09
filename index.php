@@ -14,7 +14,7 @@
             <input type="password" id="password" name="password" placeholder="password">
             <button type="submit" name="login">Bejelentkezés</button>
         </form>
-        <a href="/signup.php">Regisztráció</a> 
+        <a href="./signup.php">Regisztráció</a> 
         
     </div>
 </main>

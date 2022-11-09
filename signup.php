@@ -13,5 +13,8 @@
             <input type="tel" name="phone" id="" class="" placeholder ="Telefonszám">
             <button type="submit" name="signup">Regisztráció</button>
         </form>
+        <?php
+            echo 'Current PHP version: ' . phpversion();
+        ?>
     </main>
 </body>

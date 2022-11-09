@@ -3,7 +3,9 @@ $severname = "localhost";
 $databaseUsername = "root";
 $databasePasword = "";
 $databaseName = "szakdoga";
-$connect = msqli_connect($severname, $databaseUsername, $databasePasword, $databaseName);
+$connect = mysqli_connect($severname, $databaseUsername, $databasePasword, $databaseName);
+echo "sajt2";
 if(!$connect){
-    die("Connection failed: ".mysqli_connect_error())
+    die("A kapcsolat sikertelen: ".mysqli_connect_error());
 }
+
