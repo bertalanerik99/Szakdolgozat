@@ -1,5 +1,6 @@
 <?php
-    require 'header.php'
+    require 'header.php';
+    session_start();
 ?>
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -11,10 +12,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Bejelenkezés</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Bejelenkezés</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Regisztráció</a>
+                        <a class="nav-link" href="signup.php">Regisztráció</a>
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,15 @@
+#login-button{
+    margin: auto;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: green;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+#login-button-div{
+    display: flex;
+}
+
