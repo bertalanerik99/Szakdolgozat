@@ -8,8 +8,15 @@
         $password = $_POST['pwd'];
         $password2 = $_POST['pwd2'];
         $phone = $_POST['phone'];
+        #-----------------------
+        $lastname = $_POST['lastname'];
+        $firstname = $_POST['firstname'];
+        $postcode = $_POST['postcode'];
+        $city = $_POST['settlement'];
+        $adress = $_POST['adress'];
         #itt input ellenorzes van de én valahogy máshogy szeretném megcsinálni. ZSóval ezt majd át kell alakítani
-        if(empty($username) || empty($email) || empty($password) || empty($password2) || empty($phone)){
+        if(empty($username) || empty($email) || empty($password) || empty($password2) || empty($phone) || empty($lastname) 
+        || empty($firstname) || empty($postcode) || empty($city) || empty($adress)){
             header("Location: ../signup.php?error=emptyfields&uid=".$username."&email=".$email."&phone=".$phone);
             exit();
             #ha valamelyik mező üres
