@@ -21,7 +21,7 @@
                         <input type="text" name="firstname" id="firstname" class="firstname mb-2" placeholder="Keresztnév" required> <br>
                         <input type="number" name="postcode" id="postcode" class="postcode mb-2" placeholder= irányítószám required min="1000" max="9999" > <br>
                         <input type="text" name="settlement" id="settlement" class="settlement mb-2" placeholder="telpülés" required> <br>
-                        <input type="text" name="adress" id="adress" class="adress mb-2" placeholder="cím" required> <br>
+                        <input type="text" name="address" id="address" class="address mb-2" placeholder="cím" required> <br>
                         
                         <div class="d-block text-center">
                             <button type="submit" name="signup">Regisztráció</button>

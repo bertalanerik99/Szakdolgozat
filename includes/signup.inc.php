@@ -2,6 +2,7 @@
     if (isset($_POST['signup'])) {
         echo "sajt";
        require_once 'databasehandler.inc.php';
+       require_once 'signupdatacheck.inc.php';
        
         $username = $_POST['uid'];
         $email = $_POST['mail'];
@@ -13,37 +14,41 @@
         $firstname = $_POST['firstname'];
         $postcode = $_POST['postcode'];
         $city = $_POST['settlement'];
-        $adress = $_POST['adress'];
-        #itt input ellenorzes van de én valahogy máshogy szeretném megcsinálni. ZSóval ezt majd át kell alakítani
-        if(empty($username) || empty($email) || empty($password) || empty($password2) || empty($phone) || empty($lastname) 
-        || empty($firstname) || empty($postcode) || empty($city) || empty($adress)){
-            header("Location: ../signup.php?error=emptyfields&uid=".$username."&email=".$email."&phone=".$phone);
-            exit();
-            #ha valamelyik mező üres
-        }
-        elseif(!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)){
-            header("Location: ../signup.php?error=invalidmailuid");
-            exit();
-            #ha rossz az email és a felhasznáónév is
-        }
-        elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            header("Location: ../signup.php?error=invalidmail&uid=".$username."&phone=".$phone);
-            exit();
-            #ha rossz az email-cím
-        }
-        elseif(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
-            header("Location: ../signup.php?error=invaliduid&mail=".$email."&phone=".$phone);
-            exit();
-            #ha nem megfelelő a jelszóformátum
-        }
-        elseif ($password !== $password2) {
-            header("Location: ../signup.php?error=passwordcheck&mail=".$username."&email=".$email."&phone=".$phone);
+        $address = $_POST['address'];
+        
+        if(postcodecheck($postcode) == FALSE){
+            header("Location: ../signup.php?error=invalidpasscode");
             exit();
         }
-        elseif (!preg_match("/^[+0-9]*$/", $phone)) {
-            header("Location: ../signup.php?error=invalidphonenumber&mail=".$username."&email=".$email);
+        elseif(namecheck($firstname, $lastname)==FALSE){
+            header("Location: ../signup.php?error=invalidlastorfistname");
+            exit(); 
+        }
+        elseif(addresscheck($city, $address) == FALSE){
+            header("Location: ../signup.php?error=invalidaddress");
+            exit();   
+        }
+        elseif(passwordcheck($password)==FALSE){
+            header("Location: ../signup.php?error=invalidpassword");
+            exit();   
+        }
+        elseif (pwdmatch($password, $password2==FALSE)) {
+            header("Location: ../signup.php?error=nomatchingpasswords");
             exit();
-        }else{
+        }
+        elseif (usernamecheck($username)==FALSE) {
+            header("Location: ../signup.php?error=invalidusername");
+            exit();
+        }
+        elseif (mailcheck($email)==FALSE) {
+                header("Location: ../signup.php?error=invalidemailaddress");
+                exit();
+        }
+        elseif (phonecheck($phone)==FALSE) {
+            header("Location: ../signup.php?error=invalidphonenumber");
+            exit();
+        }
+        else{
             #ezt a részt majd meg kell néznem újramert nem teljesen tiszta,hogy hogyan működik. A lényeg hogy el akarjuk kerülni hogy beírjanak e mezőbe egy sql parancsot.
             $sql = "SELECT username FROM users  WHERE username=?";
             $stmt = mysqli_stmt_init($connect);
