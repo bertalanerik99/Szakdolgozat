@@ -36,7 +36,7 @@ function addresscheck($settlement, $address){
 
 }
 function passwordcheck($password){
-    $isTrue = FALSE
+    $isTrue = FALSE;
     if(preg_match("/^[a-zA-Z0-9]*$/", $password)){
         $isTrue= TRUE;
         return $isTrue;
@@ -75,7 +75,7 @@ function usernamecheck($username){
     }
 }
 function phonecheck($phonenumber){
-    $isTrue = FALSE
+    $isTrue = FALSE;
     if(preg_match("/^[-+0-9]*$/", $phonenumber)){
         $isTrue = TRUE;
         return $isTrue;

@@ -65,14 +65,14 @@
                     header("Location: ../signup.php?error=usertaken&mail=".$email);
                     exit();
                 }else{
-                    $sql = "INSERT INTO users (username, email, pwd, tel) VALUES (?, ?, ?, ?)";
+                    $sql = "INSERT INTO users (username, email, pwd, tel, lastname, firstname, postcode, settlement, addr) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
                     $stmt = mysqli_stmt_init($connect);
                     if(!mysqli_stmt_prepare($stmt, $sql)){
                         header("Location: ../signup.php?error=sqlerror");
                         exit();
                     }else{
                         $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
-                        mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $hashedpassword, $phone);
+                        mysqli_stmt_bind_param($stmt, "sssssssss", $username, $email, $hashedpassword, $phone, $lastname, $firstname, $postcode, $city, $address);
                         mysqli_stmt_execute($stmt);
                         header("Location: ../signup.php?signup=success");
                         exit();
