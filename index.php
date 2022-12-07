@@ -1,6 +1,6 @@
 <?php
-    
-    require 'navbar.php';
+    require_once 'header.php';
+    require_once 'navbar.php';
 ?>
 <main>
     <div class="container">

@@ -12,5 +12,12 @@
 #login-button-div{
     display: flex;
 }
-
+#signup-button{
+    text-decoration: none;
+    background-color: green;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    padding: 8px;
+}
 

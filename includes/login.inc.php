@@ -21,22 +21,24 @@
                 if($row = mysqli_fetch_assoc($result)){
                     $passwordCheck = password_verify($Password, $row['pwd']);
                     if($passwordCheck == false){
-                        header("Location: ../index.php?errot=wrongpassword1 ");
+                        header("Location: ../index.php?error=wrongpassword1");
                         exit();
                     }
                     elseif($passwordCheck == true){
                         session_start();
-                        $_SESSION['userId'] = $row['idUsers'];
+                        $_SESSION['id'] = $row['id'];
                         $_SESSION['username'] = $row['username'];
+                        $_SESSION['lastname'] = $row['lastname'];
+                        $_SESSION['firstname'] = $row['firstname'];
                         header("Location: ../teszt.php");
                         exit();
                     }
                     else{
-                        header("Location: ../index.php?errot=wromgpassword");
+                        header("Location: ../index.php?error=wrongpassword");
                         exit();
                     }
                 }else{
-                    header("Location: ../index.php?errot=nouser");
+                    header("Location: ../index.php?error=nouser");
                     exit();
                 }
             }
