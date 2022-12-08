@@ -30,7 +30,7 @@
                         $_SESSION['username'] = $row['username'];
                         $_SESSION['lastname'] = $row['lastname'];
                         $_SESSION['firstname'] = $row['firstname'];
-                        header("Location: ../teszt.php");
+                        header("Location: ../mainpage.php");
                         exit();
                     }
                     else{

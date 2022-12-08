@@ -1,6 +1,5 @@
 <?php
     if (isset($_POST['signup'])) {
-        echo "sajt";
        require_once 'databasehandler.inc.php';
        require_once 'signupdatacheckandadduser.inc.php';
        

@@ -9,3 +9,6 @@ https://www.youtube.com/watch?v=LC9GaXkdxF8&t=2374s
 2022.12.07:
 Meg kell mégoldani hogy különböző hibákra máshogy reagáljon a program
 kellen ötlet arra hogy a követelményeket hogyan írjam ki. pl a jelszónak 8 karakter hosszúnak kell lennie legalább
+
+2022.12.08:
+Ahol meg akarom majd jeleníteni a személyes adatokat ott egyenlőre még nem tudtam leszedni az adatokat szóval majd ott kell folytatni

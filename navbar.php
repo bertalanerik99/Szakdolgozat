@@ -11,21 +11,38 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Bejelenkezés</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.php">Regisztráció</a>
-                    </li>
+                    <?php
+                        if(!isset($_SESSION['id'])){
+                            echo '<li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.php">Bejelenkezés</a>
+                            </li>';
+                        }
+
+                        if(!isset($_SESSION['id'])){
+                            echo '<li class="nav-item">
+                            <a class="nav-link" href="signup.php">Regisztráció</a>
+                            </li>';
+                        }
+                        if(isset($_SESSION['id'])){
+                            echo '<li class="nav-item">
+                            <a class="nav-link" href="personaldata.php">
+                                Profilom <i class="bi bi-person-circle"></i>
+                            </a>
+                            </li>';
+                                                }
+                        if(isset($_SESSION['id'])){
+                            echo '<li class="nav-item">
+                            <a class="nav-link" href="./includes/logout.inc.php">
+                                Kijelentkezés <i class="bi bi-box-arrow-right"></i>
+                            </a>
+                            </li>';
+                        }
+
+                        
+                    ?>
                 </ul>
             </div>
         </div>
-        <?php
-            if(isset($_SESSION['id'])){
-                echo '<form action="includes/logout.inc.php" method="post">
-                <button type="submit" name="logout">Kijelentkezés</button>
-                </form>';
-            }
-        ?>
+        
     </nav>
 </body>
