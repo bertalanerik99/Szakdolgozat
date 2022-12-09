@@ -12,3 +12,6 @@ kellen ötlet arra hogy a követelményeket hogyan írjam ki. pl a jelszónak 8 
 
 2022.12.08:
 Ahol meg akarom majd jeleníteni a személyes adatokat ott egyenlőre még nem tudtam leszedni az adatokat szóval majd ott kell folytatni
+
+2022.12.09:
+NAvbarnak van valami baja amit ajvítanom kell
