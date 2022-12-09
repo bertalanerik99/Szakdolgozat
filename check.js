@@ -12,7 +12,7 @@ let isaddresscorrect = false;
 function buttonactivate(){
     if((ispwdcorrect == true) && (ispwdcorrect2 == true) && (isusernamecorrect == true) && (ismailcorreect == true)
         && (isphonenumbercorrect == true) && (islastnamecorrect == true) && (isfirstnamecorrect == true)
-        && (ispostcodecorrect == true) && (isfirstnamecorrect == true) && (isaddresscorrect == true))
+        && (ispostcodecorrect == true) && (isfirstnamecorrect == true) && (isaddresscorrect == true) &&issettlementcorrect== true   )
     {
         document.getElementById("signup-button").removeAttribute('disabled');
     }
@@ -24,6 +24,7 @@ function buttonactivate(){
 //jelszómező ellenőrzé
 passwordinput = document.getElementById("pwd");
 passwordinput.addEventListener("click",pwdfunction);
+passwordinput.addEventListener("input",pwdfunction);
 function pwdfunction(){
     passwordinput.addEventListener("keyup", passwordcheck);
     passwordinput.addEventListener("mousemove", passwordcheck);
@@ -49,6 +50,7 @@ function passwordcheck() {
 //2. jelszómező ellenőrzése
 passwordinput2 = document.getElementById("pwd2");
 passwordinput2.addEventListener("click",pwdfuntion2);
+passwordinput2.addEventListener("input",pwdfuntion2);
 function pwdfuntion2(){
     passwordinput2.addEventListener("keyup", passwordcheck2);
     passwordinput2.addEventListener("mousemove", passwordcheck2);
@@ -73,6 +75,7 @@ function passwordcheck2() {
 //felhasználónév ellenőrzése
 usernameinput = document.getElementById("uid");
 usernameinput.addEventListener("click", usernamefunction);
+usernameinput.addEventListener("input", usernamefunction);
 function usernamefunction(){
     usernameinput.addEventListener("keyup", usernamecheck);
     usernameinput.addEventListener("mousemove", usernamecheck);
@@ -92,6 +95,7 @@ function usernamecheck(){
 //email ellenőrzés
  emailinput = document.getElementById("mail");
  emailinput.addEventListener("click", mailfunction);
+ emailinput.addEventListener("input", mailfunction);
  function mailfunction(){
     emailinput.addEventListener("keyup",emailcheck);
     emailinput.addEventListener("mousemove",emailcheck);
@@ -112,6 +116,7 @@ function usernamecheck(){
  //telefonszám ellenőrzés
  phoneinput = document.getElementById("phone");
  phoneinput.addEventListener("click", phonefunction);
+ phoneinput.addEventListener("input", phonefunction);
  function phonefunction(){
     phoneinput.addEventListener("keyup", phonecheck);
     phoneinput.addEventListener("mousemove", phonecheck);
@@ -133,6 +138,7 @@ function usernamecheck(){
  //vezetéknév ellenőrzés
  lastnameinput = document.getElementById("lastname");
  lastnameinput.addEventListener("click", lastnamefunction);
+ lastnameinput.addEventListener("input", lastnamefunction);
  function lastnamefunction(){
     lastnameinput.addEventListener("keyup", lastnamecheck);
     lastnameinput.addEventListener("mousemove", lastnamecheck);
@@ -153,6 +159,7 @@ function usernamecheck(){
 // keresztnév ellenőrzés
  firstnameinput = document.getElementById("firstname");
  firstnameinput.addEventListener("click", firstnamefunction);
+ firstnameinput.addEventListener("input", firstnamefunction);
  function firstnamefunction(){
     firstnameinput.addEventListener("keyup", firstnamecheck);
     firstnameinput.addEventListener("mousemove", firstnamecheck);
@@ -173,6 +180,7 @@ function usernamecheck(){
  
  postcodeinput = document.getElementById("postcode");
  postcodeinput.addEventListener("click", postcodefunction);
+ postcodeinput.addEventListener("input", postcodefunction);
  function postcodefunction(){
     postcodeinput.addEventListener("keyup", postcodcheck);
     postcodeinput.addEventListener("mousemove", postcodcheck);
@@ -193,6 +201,7 @@ function usernamecheck(){
  // településellenőrzés
  settlementinput = document.getElementById("settlement");
  settlementinput.addEventListener("click", settlementfunction);
+ settlementinput.addEventListener("input", settlementfunction);
  function settlementfunction(){
     settlementinput.addEventListener("keyup", settlementcheck);
     settlementinput.addEventListener("mousemove", settlementcheck);
@@ -213,6 +222,7 @@ function usernamecheck(){
 //cím ellenőrzé
 addressinput = document.getElementById("address");
 addressinput.addEventListener("click", addressfunction);
+addressinput.addEventListener("input", addressfunction);
 function addressfunction(){
     addressinput.addEventListener("keyup", addresscheck);
     addressinput.addEventListener("mousemove", addresscheck);
