@@ -12,36 +12,56 @@
         <div class="row">
             <h1 class="text-center">Személyes adatok:</h1>
         </div>
-        <div class="row">
-            <div class="col-6">
-                <p class="text-end">Teljes név:</p>
+        <div class="row lh-lg">
+            <div class="col-4 col-sm-6 col-md-6 col-lg-6">
+                <p class="text-end fw-bold">Teljes név:</p>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3">
                 <?php echo $fullname; ?>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <p class="text-end">E-Mail cím:</p>
+            <div class="col-2 col-sm-2 col-md-3 col-lg-3"> 
+                <button type="button" class="btn btn-success">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
             </div>
-            <div class="col-6">
+        </div>
+        <div class="row lh-lg">
+            <div class="col-4 col-sm-6 col-md-6 col-lg-6">
+                <p class="text-end fw-bold">E-Mail cím:</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3">
                 <?php echo $email; ?>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <p class="text-end">Telefonszam:</p>
+            <div class="col-2 col-sm-2 col-md-3 col-lg-3"> 
+                <button type="button" class="btn btn-success">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
             </div>
-            <div class="col-6">
+        </div>
+        <div class="row lh-lg">
+            <div class="col-4 col-sm-6 col-md-6 col-lg-6">
+                <p class="text-end fw-bold">Telefonszam:</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3">
                 <?php echo $phone; ?>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <p class="text-end">Lakcím:</p>
+            <div class="col-2 col-sm-2 col-md-3 col-lg-3"> 
+                <button type="button" class="btn btn-success">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
             </div>
-            <div class="col-6">
+        </div>
+        <div class="row lh-lg">
+            <div class="col-4 col-sm-6 col-md-6 col-lg-6">
+                <p class="text-end fw-bold">Lakcím:</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3">
                 <?php echo $address; ?>
+            </div>
+            <div class="col-2 col-sm-2 col-md-3 col-lg-3"> 
+                <button type="button" class="btn btn-success">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
             </div>
         </div>
     </div>

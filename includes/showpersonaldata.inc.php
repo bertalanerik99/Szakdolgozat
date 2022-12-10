@@ -10,9 +10,9 @@
     $result = mysqli_query($connect, $sql);
     $row = mysqli_fetch_assoc($result);
     $username = $row['username'];
-    $fullname = $row['lastname']."&nbsp".$row['firstname'];
+    $fullname = $row['lastname']." ".$row['firstname'];
     $email = $row['email'];
     $phone = $row['tel'];
-    $address = $row['postcode']."&nbsp".$row['settlement']."&nbsp".$row['addr'];
+    $address = $row['postcode']." ".$row['settlement']." ".$row['addr'];
     
 ?>

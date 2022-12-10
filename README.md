@@ -15,3 +15,6 @@ Ahol meg akarom majd jeleníteni a személyes adatokat ott egyenlőre még nem t
 
 2022.12.09:
 NAvbarnak van valami baja amit ajvítanom kell
+
+2022.12.10:
+sweetalertet kell beintegrálni.
