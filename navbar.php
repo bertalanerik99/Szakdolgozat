@@ -9,7 +9,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ">
                     <?php
                         if(!isset($_SESSION['id'])){
@@ -23,13 +23,21 @@
                             <a class="nav-link fw-bold" href="signup.php">Regisztráció</a>
                             </li>';
                         }
+                        
                         if(isset($_SESSION['id'])){
                             echo '<li class="nav-item">
                             <a class="nav-link fw-bold" href="personaldata.php">
                                 Profilom <i class="bi bi-person-circle"></i>
                             </a>
                             </li>';
-                                                }
+                        }
+                        if(isset($_SESSION['id'])){
+                            echo '<li class="nav-item">
+                            <a class="nav-link fw-bold" href="personaldata.php">
+                                Kosár <i class="bi bi-cart4"></i>
+                            </a>
+                            </li>';
+                        }
                         if(isset($_SESSION['id'])){
                             echo '<li class="nav-item">
                             <a class="nav-link fw-bold" href="./includes/logout.inc.php">
@@ -42,6 +50,7 @@
                     ?>
                 </ul>
             </div>
+            
         </div>
         
     </nav>

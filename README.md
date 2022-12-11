@@ -18,3 +18,6 @@ NAvbarnak van valami baja amit ajvítanom kell
 
 2022.12.10:
 sweetalertet kell beintegrálni.
+
+https://www.youtube.com/watch?v=Ep7NSDSRouY
+ez a vidinyó kell nekem. Kinézetre tökéltes.
