@@ -20,4 +20,6 @@ NAvbarnak van valami baja amit ajvítanom kell
 sweetalertet kell beintegrálni.
 
 https://www.youtube.com/watch?v=Ep7NSDSRouY
+
 ez a vidinyó kell nekem. Kinézetre tökéltes.
+https://www.google.com/search?q=how+to+print+to+the+screen+the+the+last+added+row+from+the+database+using+php&oq=how+to+print+to+the+screen++the+the+last+added+row+from+the+database+using+php&aqs=chrome..69i57.35375j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:c1d90318,vid:ndF-b902UnA

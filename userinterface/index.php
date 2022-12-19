@@ -11,7 +11,7 @@
             <div class="card mt-4 d-flex align-items-center  mx-auto" style="width: 18rem;">
                 <div class="card-body ">
                     <p class="card-tittle text-center fs-3 fw-bold">Jelentkezz be!</p> 
-                    <form calss="" action="includes/login.inc.php" method="post">
+                    <form class="" action="includes/login.inc.php" method="post">
                         <label for="username">Felhasználónév:</label>
                         <br>
                         <input type="text" id="username" name="username" placeholder="Felhasználónév/E-mail">
