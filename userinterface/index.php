@@ -32,3 +32,28 @@
         </div>
     </main>
 </body>
+<?php 
+    if(isset($_GET['error'])){
+        if ($_GET['error'] == "emptyfields") {
+            echo '<script>
+            Swal.fire({
+                title: "Hiba!",
+                text: "Kérem töltse ki az összes mezőt!",
+                icon: "error",
+                confirmButtonColor: "red"
+              });
+                </script>';
+        }
+        if ($_GET['error'] == "wrongpasswordorusername") {
+            echo '<script>
+            Swal.fire({
+                title: "Hiba!",
+                text: "Rossz felhasználónév vagy jelszó!",
+                icon: "error",
+                confirmButtonColor: "red"
+              });
+                </script>';
+        }
+        
+    }
+?>

@@ -5,7 +5,11 @@
 ?>
 <body>
     <div class="container">
-        
-        <div class="row">sss</div>
+        <div class="row">
+            <h1 class="text-center">Álandó ajánltaink:</h1>
+        </div>
+        <?php 
+        require_once 'display-permanentoffers.php';
+        ?>
     </div>
 </body>

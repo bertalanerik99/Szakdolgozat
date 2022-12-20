@@ -4,7 +4,7 @@
         $adminuser = $_POST['adminusername'];
         $password =$_POST['adminpassword'];
         if(empty($adminuser) || empty($password)){
-            header("location: ../index.php?=emptyfields");
+            header("location: ../index.php?error=emptyfields");
             exit();
         }
         else{
@@ -21,7 +21,7 @@
                 if($row = mysqli_fetch_assoc($result)){
                     $passwordCheck = password_verify($password, $row['admin_password']);
                     if($passwordCheck == false){
-                        header("Location: ../index.php?error=wrongpassword-admin");
+                        header("Location: ../index.php?error=wrongpasswordoradminuser");
                         exit();
                     }
                     elseif($passwordCheck == true){
@@ -36,7 +36,7 @@
                         exit();
                     }
                 }else{
-                    header("Location: ../index.php?error=noadminuser");
+                    header("Location: ../index.php?error=wrongpasswordoradminuser");
                     exit();
                 }
             }

@@ -21,7 +21,7 @@
                 if($row = mysqli_fetch_assoc($result)){
                     $passwordCheck = password_verify($Password, $row['pwd']);
                     if($passwordCheck == false){
-                        header("Location: ../index.php?error=wrongpassword1");
+                        header("Location: ../index.php?error=wrongpasswordorusername");
                         exit();
                     }
                     elseif($passwordCheck == true){
@@ -38,7 +38,7 @@
                         exit();
                     }
                 }else{
-                    header("Location: ../index.php?error=nouser");
+                    header("Location: ../index.php?error=wrongpasswordorusername");
                     exit();
                 }
             }
