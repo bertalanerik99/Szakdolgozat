@@ -33,7 +33,7 @@
                         }
                         if(isset($_SESSION['id'])){
                             echo '<li class="nav-item">
-                            <a class="nav-link fw-bold" href="personaldata.php">
+                            <a class="nav-link fw-bold" href="shoppingcart.php">
                                 Kosár <i class="bi bi-cart4"></i>
                             </a>
                             </li>';
